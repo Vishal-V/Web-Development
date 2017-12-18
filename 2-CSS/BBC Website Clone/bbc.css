@@ -1,0 +1,241 @@
+<style type="text/css">
+		* {
+			box-sizing: border-box;
+			font-family: Helvetica, Arial, sans-serif;
+		}
+		body {
+			margin: 0;
+			padding: 0px;
+			font-family: Helvetica, Arial, sans-serif;
+		}
+		#topbar {
+			width: 1150px;
+			margin: 0 auto;
+			height: 40px;
+		
+			
+		}
+		#logo {
+			margin-top: 8px;
+			width: 100px;
+			float: left;
+		}
+
+		.sign-in {
+			float: left;
+			text-align: center;
+			border-left: 1px #cccccc solid;
+			height: 100%;
+			margin-left: 8px;	
+		}
+		#signintext, #news, #sport, #weather, #iplayer, #tv, #more {
+			font-weight: bold;
+			font-size: 0.9em;
+			position: relative;
+			top: 12.5px;
+			padding: 15px;
+		}
+
+		#signinlogo{
+			width: 30px;
+			margin: 8px;
+			margin-bottom: 10px;
+			float: left;
+		}
+		#morelogo {
+			width: 30px;
+			margin: 8px;
+			margin-bottom: 10px;
+			padding-top: 3px;
+			float: left;
+		}
+		#search {
+			float: left;
+			background-color: #E4E4E4;
+			font-weight: bold;
+			width: 185px;
+			margin-top: 5px;
+			border: none;	
+			padding: 8px;	
+		}
+		#searchpic {
+			float: left;
+			margin-top: 5px;
+			height: 32px;
+		}
+		.clear {
+			clear: both;
+		}
+
+		#menu-topbar {
+			background-color: rgb(187, 25, 25);
+			width: 100%;
+			height: 90px;
+		}
+		#menu-bar {
+			margin: 0 auto;
+			background-color: rgb(187, 25, 25);
+			width: 1150px;
+			height: 90px;
+		}
+		
+		h1 {
+			padding: 8px;
+			margin: 0;
+			font-size: 2.25em;
+			font-weight: normal;
+			color: white;
+			padding-top: 20px;
+			padding-left: 1px;
+		
+		}
+		#localnews a {
+			text-decoration: none;
+			color: white;
+			float: right;
+		}
+		#localnews span {
+			position: relative;
+			top: -35px;
+			left: -20px;
+			border: 2px grey solid;
+			padding: 8px;
+		}
+		
+		#localnews a:hover {
+			text-decoration: underline;
+		}
+		#more1 {
+			border: none !important;
+			text-decoration: none !important;
+		}
+		#menu-lower {
+			background-color: rgb(169, 23, 23); 
+			width: 100%;
+			height: 40px;
+		}
+		#lower {
+			background-color: rgb(169, 23, 23);
+			margin: 0 auto;
+			width: 1200px;
+			height: 40px;
+		}
+		#lower a {
+			color: white;
+			text-decoration: none;
+		}
+
+		#lower a:hover {
+			text-decoration: underline;
+		}	 
+
+		#lower span {
+			position: relative;
+			top: 2px;
+			padding: 0px 25px;
+			border-right: 1px solid white;
+		}
+		#pict1 {
+			position: relative;
+			top: 10px;
+			left: -8px;
+		}
+		#main-article {
+			width: 100%;
+			height: auto;
+		}
+		#page-container {
+			margin: 0 auto;
+			width: 1150px;
+		}
+		#techheader{
+			width: 1150px;
+			margin: 0 auto;
+		}
+		#page-container h2 {
+			border-bottom: 4px solid rgb(187, 25, 25);
+			display: inline-block;
+			line-height: 1.05;
+			font-weight: normal;
+			color: rgb(90, 90, 90);
+		}
+		.floater {
+			float: left;
+		}
+		#article-header a {
+			color: black;
+			font-size: 2.25em;
+			text-decoration: none;
+		}
+		#article-header a:hover {
+			color: #1167a8;
+		}
+		#summary {
+			color: rgb(90, 90, 90);
+			width: 280px;
+		}
+		#linked1 span {
+			color: rgb(90, 90, 90);
+			position: relative;
+			top: -8px;
+			left: -1px;
+			
+		}
+		#linked1 a {
+			text-decoration: none;
+			color: rgb(169, 23, 23);
+			padding-left: 8px;
+			position: relative;
+			top: -8px; 
+		}
+		#article-box a:hover {
+			color: #1167a8;
+		}
+		#timer {
+			padding: 5px;
+			position: relative;
+			left: -5px;
+			float: left;
+		}
+		#article-box {
+			float: left;
+			margin-right: 10px;
+			width: 700px;
+			padding-right: 20px;
+			margin-right: 20px;
+			border-right: 1px rgb(132, 132, 132) solid;
+		}
+		#line {
+			border-color: rgb(169, 23, 23);
+			width: 50px;
+		}
+		p a {
+			text-decoration: none;
+			color: black;
+		}
+		#line1 {
+			text-decoration: none;
+			font-size: 1.75em;
+			position: relative;
+			top: -30px;
+		}
+		#vid1 {
+			position: relative;
+			top: -35px;
+			font-size: 1em;
+			font-weight: bold;
+		}
+		#video1 {
+			text-decoration: none;
+			color: black;
+		}
+		#video1:hover {
+			color: #1167a8;
+		}
+
+		#linkedit1:hover {
+			color: #1167a8;
+		}
+
+
+	</style>
