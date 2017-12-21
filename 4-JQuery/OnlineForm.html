@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login form</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
+	<style type="text/css">
+		body {
+			font-family: 'Arsenal', sans-serif;
+			box-sizing: border-box;
+			font-size: 1.85em;
+		}
+		input {
+			height: 30px;
+			width: 230px;
+			padding: 0 10px; 
+			border-radius: 3px;
+			border: 2px grey solid;
+			margin-left: 5px;
+
+		}
+
+		label {
+			float: left;
+			position: relative;
+			top: 5px;
+			width: 230px;
+			
+		}
+		.container{
+			width: 600px;
+			margin: 0 auto;
+		}
+		#signup {
+			width: 100px;
+			height: 30px;
+			position: relative;
+			left: 170px;
+		}
+		#error {
+			color: rgb(169, 23, 23);
+			font-size: 0.75em !important;  
+		}
+		#success {
+			color: green;
+			display: none;
+			font-size: 0.75em !important;
+		}
+
+	</style>
+	<script type="text/javascript" src = "jquery.min.js"></script>
+</head>
+<body>
+
+	<div class="container" id="error"></div>
+	<div class="container" id="success">Success! You did it.</div>
+	
+	<div class="container">
+	<label for="email">Email</label>
+	<input type="text" name="email" id="email" placeholder="example@gmail.com">
+	</div>
+
+	<div class="container">
+	<label for="telephone">Telephone</label>
+	<input type="text" name="telephone" id="telephone" placeholder="Please enter a valid phone number">
+	</div>
+
+	<div class="container">
+	<label for="password">Password</label>
+	<input type="password" name="password" id="password">
+	</div>
+
+	<div class="container">
+	<label for="confirmpassword" class="password">Confirm Password</label>
+	<input type="password" name="confirm password" id="passwordconfirm">
+	<div class="password-meter">
+		<div class="password-meter-message"> </div>
+		<div class="password-meter-bg">
+			<div class="password-meter-bar"></div>
+		</div>
+	</div>
+	</div>
+
+	<div class="container">
+	<button id="signup">Sign up</button>
+	</div>
+
+	<script type="text/javascript">
+		
+		function isEmail(email) {
+  		var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  		return regex.test(email);
+		}
+		
+
+		$("#signup").click(function(){
+			var missing = '';
+			var error = '';
+
+
+			if ($("#email").val() == "") {
+				missing += '<br>email';
+			}
+			if ($("#telephone").val() == "") {
+				missing += '<br>Telephone number';
+			}
+			if ($("#password").val() == "") {
+				missing += '<br>Password';
+			}
+			if ($("#passwordconfirm").val() == "") {
+				missing += '<br>Confirm Password';
+			}
+			if (missing != '') {
+				error += "<p><ins>The following field(s) are missing: </ins>" + missing;
+			}
+
+			if (isEmail($("#email").val()) == false) {
+				error += "<p>Your email is not valid</p>"
+			}
+
+			if ($.isNumeric($("#telephone").val()) == false) {
+				error += "<p>Your telephone number is not valid</p>";
+			}
+
+			if ($("#passwordconfirm").val() != $("#password").val()) {
+				error += "<p>Your passwords don't match</p>"
+			}
+			if (error != '') {
+				$("#error").html(error);
+			}
+			else {
+				$("#success").css("display", "block")
+				$("#error").hide();
+			}
+
+			})
+
+		
+
+	</script>
+
+</body>
+</html>
