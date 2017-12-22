@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code Editor</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
+
+	<style type="text/css">
+		* {
+			font-family: 'Arsenal', sans-serif;
+			box-sizing: border-box;
+		}
+		#menu-container {
+			background-color: rgb(222, 12, 41);
+
+		}
+		#toggle-panel {
+			width: 300px;
+			margin: 0px auto;
+		}
+		button {
+			width: 70px;
+			height: 30px;
+			background-color: white;
+			color: rgb(169, 23, 23);
+		}
+		.panel {
+			resize: none;
+		}
+		.hidden {
+			display: none;
+		}
+		textarea {
+			margin-top: 10px;
+			padding: 10px;
+			border: 2px solid black;
+			font-size: 18px;
+			float: left;
+		}
+		#outputarea {
+			float: left;
+			margin-top: 10px;
+		}
+		.active {
+			background-color: darkblue;
+			color: white;
+		}
+		.proactive {
+			background-color: lightblue;
+			color: white;
+		}	
+	</style>
+
+</head>
+<body>
+	<div id="menu-container">
+		<div id="title"><h1 style="color: white;">Code Fantatico</h1></div>
+
+		<div id="toggle-panel">
+			<button id="html" class="active">HTML</button>
+			<button id="css">CSS</button>
+			<button id="js">JavaScript</button>
+			<button id="output" class="active">Output</button>
+
+		</div>
+
+	</div>
+
+	<textarea id="htmlarea" class="panel" placeholder="HTML here"></textarea>
+	<textarea id="cssarea" class="panel hidden" placeholder="CSS here"></textarea>
+	<textarea id="jsarea" class="panel hidden" placeholder="JavaScript here"></textarea>
+	<iframe id="outputarea" class="panel"></iframe>
+
+	<script type="text/javascript">
+		$(".panel").height($(window).height() - $("#menu-container").height() - 60);
+		$("#outputarea").height($(window).height() - $("#menu-container").height() - 45);
+		$("#htmlarea").css('width', '50%');
+		$("#outputarea").css('width', '50%');
+
+		$("button").hover(function() {
+			$(this).toggleClass('proactive');
+		})
+
+		$("button").click(function() {
+			var ids = $(this).attr("id") + 'area';
+			$('#' + ids).toggleClass('hidden');
+			$(this).toggleClass('active');
+			var num = 4 - $(".hidden").length;
+			$(".panel").width($(window).width()/num - 35);
+		})
+
+		function sourceCode() {
+			$("#outputarea").contents().find('html').html("<html><head><style type='text/css'>" + $("#cssarea").val() + "</style></head><body>" + $("#htmlarea").val() + "</body></html>");
+
+			var framed = document.getElementById("outputarea").contentWindow.eval($("#jsarea").val());
+		}
+		sourceCode();
+
+		$("textarea").on('paste keyup change', function() {
+			sourceCode();
+		})
+
+	</script>
+
+</body>
+</html>
