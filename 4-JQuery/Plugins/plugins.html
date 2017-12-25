@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Plugins</title>
+	<meta charset="utf-8">
+	<link href="jquery-ui/jquery-ui.css" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript" src = 'jquery.min.js'></script>
+	<script src="jquery-ui/jquery-ui.js"></script>
+	<style>
+ 		#draggable1 {
+	 		width: 350px; 
+	 		height: 450px;
+	 		padding: 0.5em; 
+	 		border-radius: 2px;
+	 		border: 2px black solid;
+ 		}
+ 		#little {
+	 		width: 70px; 
+	 		height: 60px;
+	 		padding: 0.5em; 
+	 		border-radius: 2px;
+	 		border: 2px black solid;
+ 		}
+ 		#big {
+ 			width: 350px;
+ 			height: 350px;
+ 			border: 2px black solid;
+ 		}
+ 	 </style>
+ 	 <style type="text/css" rel = "stylesheet" href = "jquery-ui/jquery-ui.css"></style>
+ 	 
+
+</head>
+<body>
+	<div id="accordion">
+		
+		<h3>Section1</h3>
+	 	<div id="section1">
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	 	</p>
+	 	</div>
+		<h3>Section2</h3>
+		<div id="section2">
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	 	</p>
+	 	</div>
+
+	 	<h3>Section3</h3>
+	 	<div id="section3">
+	 	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	 	</p>
+	 	</div>
+	 	<div style="width: 50px; height: 50px; border: 2px solid black" id="resize"></div>
+	 	<div style="width: 50px; height: 50px; border: 2px solid black" id="also"></div>
+
+	 	<ul id="sortable">
+	 		<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+		    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+		    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+		    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+		    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+		    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+		    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+		    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 8</li>
+		 </ul>
+
+	</div>
+
+ 	<script type="text/javascript">
+ 		$("#accordion").accordion();
+ 		$("#resize").resizable({ resize: function(event,ui){
+ 			alert("Hello!")
+ 		}})
+
+ 		$("#sortable").sortable({ placeholder: "ui-state-highlight"});
+ 		$("#sortable").disableSelection();
+ 			
+ 	 	
+ 	 </script>
+	
+
+		
+
+</body>
+</html>
